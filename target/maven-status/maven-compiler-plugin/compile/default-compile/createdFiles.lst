@@ -1,0 +1,6 @@
+dao\DespesaDAO.class
+model\Categoria.class
+dao\IDespesaDAO.class
+Application.class
+infra\ConnectionFactory.class
+model\Despesa.class
