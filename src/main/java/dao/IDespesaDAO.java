@@ -13,6 +13,6 @@ public interface IDespesaDAO {
     void delete(Long id);
     List<Despesa> findAll();
     Optional<Despesa> findById(Long id);
-    List<Despesa> findCategoria(Categoria categoria);
+    List<Despesa>   findCategoria(Categoria categoria);
 
 }

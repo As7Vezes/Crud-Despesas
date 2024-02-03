@@ -3,6 +3,8 @@ import model.Categoria;
 import model.Despesa;
 
 import java.time.LocalDate;
+import java.util.List;
+import java.util.Optional;
 
 public class Application {
 
@@ -10,13 +12,13 @@ public class Application {
 
         DespesaDAO dao = new DespesaDAO();
 
-        Despesa despesa = new Despesa();
-        despesa.setDescricao("Pagamento do alugel");
-        despesa.setCategoria(Categoria.MORADIA);
-        despesa.setValor(1200);
-        despesa.setData(LocalDate.of(2024, 1, 31));
-
-        dao.save(despesa);
+        List<Despesa> despesas = dao.findCategoria(Categoria.TRANSPORTE);
+        for (Despesa despesa : despesas) {
+            System.out.println("ID: " + despesa.getId());
+            System.out.println("Descrição: " + despesa.getDescricao());
+            System.out.println("Categoria: " + despesa.getCategoria());
+            System.out.println("Valor: " + despesa.getValor());
+        }
 
     }
 
