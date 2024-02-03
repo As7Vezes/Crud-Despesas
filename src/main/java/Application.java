@@ -12,13 +12,7 @@ public class Application {
 
         DespesaDAO dao = new DespesaDAO();
 
-        List<Despesa> despesas = dao.findCategoria(Categoria.TRANSPORTE);
-        for (Despesa despesa : despesas) {
-            System.out.println("ID: " + despesa.getId());
-            System.out.println("Descrição: " + despesa.getDescricao());
-            System.out.println("Categoria: " + despesa.getCategoria());
-            System.out.println("Valor: " + despesa.getValor());
-        }
+        dao.delete(2L);
 
     }
 
